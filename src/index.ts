@@ -1,8 +1,5 @@
 import { characters, charactersType } from './personajes.js';
 import { specialProperties } from './specialProperties.js';
-// import { aliveOrNot } from './specialProperties.js';
-// import { aliveOrDeadFunction } from '././deadButton.js';
-// import { findCharacter } from '././deadButton.js';
 
 let characterCode: string = ' ';
 characters.forEach((item) => {
@@ -10,7 +7,7 @@ characters.forEach((item) => {
     <li class="character col">
                     <div class="card character__card">
                         <img
-                            src="../assets/characters/${item.image}"
+                            src="./assets/characters/${item.image}"
                             alt="Nombre y familia del personaje"
                             class="character__picture card-img-top"
                             id="img${item.name.split(' ')[0]}"
@@ -125,7 +122,7 @@ characters.forEach((item) => {
                 `#img${item.name.split(' ')[0]}`
             );
             if (speakImg != null) {
-                speakImg.src = '../assets/characters/${item.image}';
+                speakImg.src = './assets/characters/${item.image}';
             }
             const speakOn: HTMLElement | null =
                 document.querySelector('.comunications');
