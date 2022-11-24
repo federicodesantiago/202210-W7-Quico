@@ -28,8 +28,6 @@ characters.forEach((item) => {
             item.name.split(' ')[0]
         }"></i> `;
 
-    // characterCode += aliveOrNot(item);
-
     characterCode += `</li>
                                 </ul>
                             </div>
@@ -97,9 +95,9 @@ characters.forEach((item) => {
                 Una frase que dice alguien
             </p>
             <img
-                id="img${item.name.split(' ')[0]}"
+                id="imgSpeak"
                 class="comunications__picture"
-                src=" "
+                src = " ";
                 alt="${item.name}"
             />
         </div>`;
@@ -118,11 +116,11 @@ characters.forEach((item) => {
             if (speakInner != null) {
                 speakInner.innerHTML = `${item.sentence}`;
             }
-            const speakImg: HTMLImageElement | null = document.querySelector(
-                `#img${item.name.split(' ')[0]}`
-            );
+            const speakImg: HTMLImageElement | null =
+                document.querySelector('#imgSpeak');
+            console.log(item.name.split(' ')[0]);
             if (speakImg != null) {
-                speakImg.src = './assets/characters/${item.image}';
+                speakImg.src = `./assets/characters/${item.image}`;
             }
             const speakOn: HTMLElement | null =
                 document.querySelector('.comunications');

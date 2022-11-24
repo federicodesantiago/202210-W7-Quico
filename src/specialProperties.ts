@@ -22,18 +22,3 @@ export function specialProperties(item: charactersType) {
     }
     return characterCode;
 }
-
-export function aliveOrNot(item: charactersType) {
-    let characterCode: string = ' ';
-    if (item.status) {
-        characterCode = `<i class="fas fa-thumbs-up id="live${
-            item.name.split(' ')[0]
-        }"></i>`;
-    }
-    if (!item.status) {
-        characterCode = `<i class="fas fa-thumbs-down id="die${
-            item.name.split(' ')[0]
-        }"></i>`;
-    }
-    return characterCode;
-}
