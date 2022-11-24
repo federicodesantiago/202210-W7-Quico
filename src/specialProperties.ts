@@ -24,13 +24,16 @@ export function specialProperties(item: charactersType) {
 }
 
 export function aliveOrNot(item: charactersType) {
-    let characterCode = ' ';
+    let characterCode: string = ' ';
     if (item.status) {
-        characterCode += `<i class="fas fa-thumbs-up"></i>`;
+        characterCode = `<i class="fas fa-thumbs-up id="live${
+            item.name.split(' ')[0]
+        }"></i>`;
     }
     if (!item.status) {
-        characterCode += `<i class="fas fa-thumbs-down"></i>`;
+        characterCode = `<i class="fas fa-thumbs-down id="die${
+            item.name.split(' ')[0]
+        }"></i>`;
     }
-
     return characterCode;
 }
