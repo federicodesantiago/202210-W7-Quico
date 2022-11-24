@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="./scripts/index.js" type="module"></script>
+        <link rel="stylesheet" href="./css/styles.css" />
+        <title>Home - Learning DOM</title>
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <header> -->
+        <slot name="header"></slot>
+        <section>
+            <p class="saludo"></p>
+            <button data-value="1">Haz click 1</button>
+            <button data-value="2">Haz click 2</button>
+            <button data-value="3">Haz click 3</button>
+        </section>
+        <form>
+            <input type="text" placeholder="Dime tu nombre" required />
+            <input type="text" placeholder="Dime tu edad" />
+            <button type="submit">Enviar</button>
+            <div>
+                <output></output>
+                <p id="p1" hidden>Encantados de tenerte aquí</p>
+                <p id="p2" class="hidden">Qué grande eres.</p>
+            </div>
+            <div>
+                <nav class="search">
+                    <input type="text" placeholder="Qué quieres buscar" />
+                    <div>
+                        <output></output>
+                    </div>
+                </nav>
+            </div>
+        </form>
+
+        <!-- <footer> -->
+        <slot name="footer"></slot>
+    </body>
+</html>
